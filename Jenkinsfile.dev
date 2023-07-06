@@ -17,8 +17,9 @@ pipeline{
          steps{
 	   script{
 	  	echo 'Archive the files in directory'
-		sh 'chmod +x tar_file.sh'
-          	sh ./tar_file
+		#sh 'chmod +x tar_file.sh'
+          	#sh ./tar_file
+		sh 'tar -cvf my_file.tar ex1 ex2 ex3'
 	   }
 	 }
        }
