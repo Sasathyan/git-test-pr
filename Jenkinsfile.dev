@@ -15,10 +15,8 @@ pipeline{
         }
        stage ('buid'){
          steps{
-	   script{
 	  	echo 'Archive the files in directory'
 		sh 'tar -cvf my_file.tar ex1 ex2 ex3'
-	   }
 	 }
        }
      }
