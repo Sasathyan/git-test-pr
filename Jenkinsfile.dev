@@ -16,9 +16,7 @@ pipeline{
        stage ('buid'){
          steps{
 	  	echo 'Archive the files in directory'
-		echo "${env.pr-label}"
-		//echo "${pull_request.head.ref}"
-		//echo "${pull_request.head.sha}"
+		echo "${pr-label}"
 		sh 'tar -cvf my_file.tar ex1 ex2 ex3'
 	 }
        }
