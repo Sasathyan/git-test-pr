@@ -16,6 +16,9 @@ pipeline{
        stage ('buid'){
          steps{
 	  	echo 'Archive the files in directory'
+		echo "${pull_request.head.label}"
+		echo "${pull_request.head.ref}"
+		echo "${pull_request.head.sha}"
 		sh 'tar -cvf my_file.tar ex1 ex2 ex3'
 	 }
        }
