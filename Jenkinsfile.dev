@@ -17,7 +17,7 @@ pipeline{
          steps{
 	  	echo 'Archive the files in directory'
 		echo "${env.pr_label}"
-		sh 'tar -cvf \"test_${pr_label}.tar\" ex1 ex2 ex3'
+		sh 'tar --force-local -cvf \\"test_${pr_label}.tar\\" ex1 ex2 ex3'
 	 }
        }
      }
